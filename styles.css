@@ -1,0 +1,177 @@
+/* ================================
+   Base Reset & Defaults
+================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* ================================
+   Animation Keyframes
+================================ */
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        transform: translateX(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from top */
+@keyframes slideInTop {
+    from {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Slide in from bottom */
+@keyframes slideInBottom {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ================================
+   Titles (Centered, from Left)
+================================ */
+h1, .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: slideInLeft 0.8s ease-out forwards;
+    color: #07ffff;
+}
+
+/* ================================
+   Headings (Centered, from Right)
+================================ */
+h2, h3, h4, h5, h6, .heading {
+    text-align: center;
+    margin: 1rem 0;
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* ================================
+   Images (Centered, from Top)
+================================ */
+img {
+    align-self: center;
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    height: auto;
+    animation: slideInTop 0.9s ease-out forwards;
+}
+
+/* ================================
+   Paragraphs (From Bottom)
+================================ */
+p, ul, ol {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    animation: slideInBottom 0.9s ease-out forwards;
+}
+
+ul, ol {
+    max-width: 700px;
+    margin: 20px auto;
+    padding-left: 40px;
+    text-align: left;
+}
+
+/* ================================
+   Links
+================================ */
+a {
+    color: #52ffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* ================================
+   Buttons
+================================ */
+
+/* Default customizable variables */
+button,
+.btn {
+    --btn-bg: #07bbbb;
+    --btn-text: #ffffff;
+    --btn-hover-bg: #71f1f1;
+    --btn-padding: 0.75rem 1.5rem;
+    --btn-radius: 999px;
+    --btn-border: none;
+
+    display: block;
+    margin: 20px auto;
+    padding: var(--btn-padding);
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: var(--btn-border);
+    border-radius: var(--btn-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+button:hover,
+.btn:hover {
+    background: var(--btn-hover-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Active press effect */
+button:active,
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Optional: Center buttons easily */
+.button-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
