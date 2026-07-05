@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rexcel - Taglang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rexcel - Taglang</h1>
+        <p>Last updated: Sunday, July 5, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>
+            Rexcel's Taglang (name pending) is a simple templating language used with the r!tag command.
+            Using it, you can create dynamic content by embedding expressions directly into your text.
+        </p>
+
+        <h2>2. Operators</h2>
+        <ul>
+            <li>
+                <code>&lt;if:condition;then[;else]&gt;</code>:
+                If <code>condition</code> is <em>True</em>, returns <code>then</code>;
+                otherwise, returns <code>else</code> (if provided).
+            </li>
+            <br>
+            <li>
+                <code>&lt;eq:arg1;arg2[;arg3...]&gt;</code>:
+                Returns <em>True</em> if all arguments are equal, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;neq:arg1;arg2&gt;</code>:
+                Returns <em>True</em> if the arguments are not equal, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;lt:arg1;arg2&gt;</code>:
+                Returns <em>True</em> if <code>arg1</code> is less than <code>arg2</code>, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;gt:arg1;arg2&gt;</code>:
+                Returns <em>True</em> if <code>arg1</code> is greater than <code>arg2</code>, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;leq:arg1;arg2&gt;</code>:
+                Returns <em>True</em> if <code>arg1</code> is less than or
+                equal to <code>arg2</code>, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;geq:arg1;arg2&gt;</code>:
+                Returns <em>True</em> if <code>arg1</code> is greater than or
+                equal to <code>arg2</code>, <em>False</em> otherwise.
+            </li>
+            <br>
+            <li>
+                <code>&lt;and:arg1;arg2[;arg3...]&gt;</code>:
+                Returns <em>True</em> if all arguments are <em>True</em>, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;or:arg1;arg2[;arg3...]&gt;</code>:
+                Returns <em>True</em> if any argument is <em>True</em>, <em>False</em> otherwise.
+            </li>
+            <li>
+                <code>&lt;not:arg&gt;</code>:
+                Returns the logical negation of <code>arg</code>.
+            </li>
+            <br>
+            <li>
+                <code>&lt;set:var;value&gt;</code>:
+                Sets the variable <code>var</code> to <code>value</code>. Returns nothing.
+            </li>
+            <li>
+                <code>&lt;var&gt;</code>:
+                Returns the value of the variable <code>var</code>.
+            </li>
+            <br>
+            <li>
+                <code>&lt;add:arg1;arg2[;arg3...]&gt;</code>:
+                Returns the sum of all arguments.
+            </li>
+            <li>
+                <code>&lt;sub:arg1;arg2&gt;</code>:
+                Returns the difference of <code>arg1</code> and <code>arg2</code>.
+            </li>
+            <li>
+                <code>&lt;mul:arg1;arg2[;arg3...]&gt;</code>:
+                Returns the product of all arguments.
+            </li>
+            <li>
+                <code>&lt;div:arg1;arg2&gt;</code>:
+                Returns the quotient of <code>arg1</code> divided by <code>arg2</code>.
+                Returns <em>{!! div: division by zero}</em> if <code>arg2</code> is zero.
+            </li>
+            <br>
+            <li>
+                <code>&lt;oneline:arg&gt;</code>:
+                Returns <code>arg</code> with all line breaks replaced by spaces,
+                and all <em>\n</em> replaced by a newline character.
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
